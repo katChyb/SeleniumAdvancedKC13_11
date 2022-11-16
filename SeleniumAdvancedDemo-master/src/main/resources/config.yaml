@@ -1,0 +1,20 @@
+activeEnv: test_env
+browser:
+  browserName: chrome
+  browserAttachScreenshot: false
+  headlessMode: true
+  browserTimeout: 60
+environments:
+  test_env:
+    envName: test_env
+    appUrl: http://146.59.32.4/index.php
+    title: TesterSii
+    currencySymbolToReplace: $
+    amountOfExpectedSearchResultsList: 1
+    wantedProduct: HUMMINGBIRD
+    minPrice: 10
+    maxPrice: 11
+
+
+
+
