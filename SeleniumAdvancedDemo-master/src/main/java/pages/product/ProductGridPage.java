@@ -1,9 +1,11 @@
 package pages.product;
 
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.SourceType;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
@@ -37,40 +39,6 @@ public class ProductGridPage extends BasePage {
         return numberOfProductsFoundLabel.getText();
     }
 
-    @FindBy(css = ".ui-slider-horizontal")
-    public WebElement priceSliderArt;
 
-    @FindBy(css ="a.ui-slider-handle:nth-child(2)")
-    public WebElement leftSlider;
-
-    @FindBy(css ="a.ui-slider-handle:nth-child(3)")
-    public WebElement rightSlider;
-
-
-
-//https://huddle.eurostarsoftwaretesting.com/selenium-interact-sliders-selenium/
-
-
-    public void moveSlider() throws InterruptedException {
-
-        waitToBeVisible(priceSliderArt);
-
-        Dimension sliderSize = priceSliderArt.getSize();
-        int sliderWidth = sliderSize.getWidth();
-        int xCoord = priceSliderArt.getLocation().getX();
-
-        System.out.println("sliderWidth" + sliderWidth);
-        System.out.println("xCoord" +xCoord);
-
-        Actions builder = new Actions(driver);
-        builder.moveToElement(priceSliderArt)
-                .click()
-                .dragAndDropBy(leftSlider, xCoord + sliderWidth, 0)
-                .build()
-                .perform();
-
-        Thread.sleep(5000);
-
-    }
 
 }

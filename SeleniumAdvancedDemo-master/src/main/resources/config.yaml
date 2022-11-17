@@ -12,8 +12,12 @@ environments:
     currencySymbolToReplace: $
     amountOfExpectedSearchResultsList: 1
     wantedProduct: HUMMINGBIRD
-    minPrice: 10
-    maxPrice: 11
+    minPrice: 9
+    maxPrice: 13
+    sliderStartingValue: 9
+    sliderEndValue: 29
+    percentFactor: 20
+
 
 
 

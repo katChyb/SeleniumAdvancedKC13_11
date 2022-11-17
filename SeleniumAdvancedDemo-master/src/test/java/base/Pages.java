@@ -6,6 +6,7 @@ import pages.TopMenuPage;
 import pages.User.MyAccountPage;
 import pages.User.RegistrationPage;
 import pages.User.SignInPage;
+import pages.product.FilterPage;
 import pages.product.ProductDetailsPage;
 import pages.product.ProductGridPage;
 import pages.product.SearchProductResultPage;
@@ -21,6 +22,8 @@ public MyAccountPage myAccountPage;
 
 public SearchProductResultPage searchProductResultPage;
 
+public FilterPage filterPage;
+
 
     @BeforeEach
     public  void setupPages() {
@@ -31,5 +34,6 @@ public SearchProductResultPage searchProductResultPage;
         signInPage = new SignInPage(driver);
         myAccountPage = new MyAccountPage(driver);
         searchProductResultPage = new SearchProductResultPage(driver);
+        filterPage = new FilterPage(driver);
     }
 }
