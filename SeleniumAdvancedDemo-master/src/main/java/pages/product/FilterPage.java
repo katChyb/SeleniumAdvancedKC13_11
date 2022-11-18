@@ -27,6 +27,7 @@ public class FilterPage extends BasePage {
 
         moveRightSlider();
         moveLeftSlider();
+
     }
 
     public void moveLeftSlider() throws InterruptedException {
@@ -51,6 +52,7 @@ public class FilterPage extends BasePage {
         builder.release().perform();
 
         Thread.sleep(5000);
+
 
     }
 
@@ -78,6 +80,6 @@ public class FilterPage extends BasePage {
 
 
         Thread.sleep(5000);
-
     }
+
 }

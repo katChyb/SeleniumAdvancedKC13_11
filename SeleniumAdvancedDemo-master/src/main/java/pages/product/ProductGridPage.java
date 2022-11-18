@@ -1,11 +1,7 @@
 package pages.product;
 
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.SourceType;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
@@ -44,10 +40,12 @@ public class ProductGridPage extends BasePage {
     }
 
     @FindBy(css = "span.price")
-    private List <WebElement> ListOfProductPriceFromGrid;
+    private List <WebElement> listOfProductPriceFromGrid;
+
 
     public Double getPriceFromProductGrid (int i){
-        return getPrice(ListOfProductPriceFromGrid.get(i));
+        return getPrice(listOfProductPriceFromGrid.get(i));
     }
+
 
 }

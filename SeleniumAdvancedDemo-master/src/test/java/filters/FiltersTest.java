@@ -1,4 +1,4 @@
-package Filters;
+package filters;
 
 import base.Pages;
 import org.junit.jupiter.api.DisplayName;
@@ -12,7 +12,8 @@ public class FiltersTest extends Pages {
     @DisplayName("Filters test-slider")
     public void filtersTestSlider() throws InterruptedException {
         topMenuPage.clickInArtCategory();
-        filterPage.moveSlider();
+       filterPage.moveLeftSlider();
+       filterPage.moveRightSlider();
 
         for (int i = 0; i < productGridPage.getSizeOfProductList(); i++) {
 
