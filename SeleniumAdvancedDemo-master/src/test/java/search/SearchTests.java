@@ -28,7 +28,6 @@ public class SearchTests extends Pages {
         topMenuPage.triggerSearchProduct();
         String numberOfProductsFound = searchProductResultPage.getNumberOfProductsFound();
         System.out.println("numberOfProductsFound " + numberOfProductsFound);
-        SoftAssertions softly = new SoftAssertions();
         softly.assertThat(numberOfProductsFound).isEqualTo(System.getProperty("amountOfExpectedSearchResultsList"));
         String nameOfFoundProduct = searchProductResultPage.getNameOfFoundProduct();
         System.out.println("nameOfFoundProduct " + nameOfFoundProduct);

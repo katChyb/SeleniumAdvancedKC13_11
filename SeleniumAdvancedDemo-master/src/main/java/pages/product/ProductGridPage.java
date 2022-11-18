@@ -32,6 +32,10 @@ public class ProductGridPage extends BasePage {
     }
 
 
+    public int getSizeOfProductList() {
+        return productGrid.size();
+    }
+
     @FindBy(css = ".total-products")
     private WebElement numberOfProductsFoundLabel;
 
@@ -39,6 +43,11 @@ public class ProductGridPage extends BasePage {
         return numberOfProductsFoundLabel.getText();
     }
 
+    @FindBy(css = "span.price")
+    private List <WebElement> ListOfProductPriceFromGrid;
 
+    public Double getPriceFromProductGrid (int i){
+        return getPrice(ListOfProductPriceFromGrid.get(i));
+    }
 
 }
