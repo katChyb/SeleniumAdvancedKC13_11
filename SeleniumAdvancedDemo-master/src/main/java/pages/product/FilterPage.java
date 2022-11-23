@@ -51,7 +51,7 @@ public class FilterPage extends BasePage {
         builder.moveByOffset(offsetPositionLeftSlider, 0).perform();
         builder.release().perform();
 
-        Thread.sleep(5000);
+         wait.until(ExpectedConditions.invisibilityOf(driver.findElement(cssSelector(".spinner"))));
 
 
     }
@@ -79,7 +79,7 @@ public class FilterPage extends BasePage {
         builder.release().perform();
 
 
-        Thread.sleep(5000);
+          wait.until(ExpectedConditions.invisibilityOf(driver.findElement(cssSelector(".spinner"))));
     }
 
 }
